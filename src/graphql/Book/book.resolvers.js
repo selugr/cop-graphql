@@ -20,9 +20,9 @@ module.exports = {
       return newBook;
     },
   },
-  // Book: {
-  //   author: (parent, args, ctx, info) => {
-  //     authors.find((a) => a.id === parent.author);
-  //   },
-  // },
+  Book: {
+    author: (parent, args, ctx, info) => {
+      return authors.find((a) => a.id === parent.author);
+    },
+  },
 };

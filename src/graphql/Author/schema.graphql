@@ -5,6 +5,7 @@ type Author {
   id: ID!
   name: String!
   country: String
+  books: [Book]
 }
 
 # The "Query" type is special: it lists all of the available queries that

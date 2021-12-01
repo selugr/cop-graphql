@@ -19,5 +19,7 @@ module.exports = {
       ...bookResolver.Mutation,
       ...authorResolver.Mutation,
     },
+    Book: { ...bookResolver.Book },
+    Author: { ...authorResolver.Author },
   },
 };
