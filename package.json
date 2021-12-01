@@ -1,0 +1,29 @@
+{
+  "name": "cop-graphql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/selugr/cop-graphql.git"
+  },
+  "author": "Selu & Jordi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/selugr/cop-graphql/issues"
+  },
+  "homepage": "https://github.com/selugr/cop-graphql#readme",
+  "dependencies": {
+    "apollo-server": "^3.5.0",
+    "fs": "^0.0.1-security",
+    "graphql": "^15.7.2",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
