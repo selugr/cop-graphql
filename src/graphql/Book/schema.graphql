@@ -2,7 +2,7 @@
 type Book {
   id: ID!
   title: String!
-  author: Author
+  author: Author!
   rating: Int
   comment: String
 }
