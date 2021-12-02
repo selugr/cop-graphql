@@ -11,10 +11,10 @@ type Query {
 }
 
 type Mutation {
-  addBook(title: String, author: String): Book
-  addBookComment(bookID: String, comment: String): Book
+  addBook(title: String!, author: String!): Book
+  addBookComment(bookID: String!, comment: String!): Book
 }
 
-# type Subscription {
-#   ratingAdded(bookID: ID!): Book
-# }
+type Subscription {
+  commentAdded: Book
+}

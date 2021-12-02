@@ -16,9 +16,16 @@ const Mutation = {
     db.authors.push(newAuthor);
     return newAuthor;
   },
-  addBookComment: (parent, args, { db }, info) => {
+  addBookComment: (parent, args, { db, pubsub }, info) => {
+    console.log("DB", db);
     const book = db.books.find((b) => b.id === args.bookID);
     book.comments.push(args.comment);
+    pubsub.publish("COMMENT_ADDED", {
+      commentCreated: {
+        author: "Ali Baba",
+        comment: "Open sesame",
+      },
+    });
     return book;
   },
 };
