@@ -12,7 +12,7 @@ type Query {
 
 type Mutation {
   addBook(title: String, author: String): Book
-  addBookComment(bookID: String, comment: String): Book
+  addBookComment(bookID: String!, comment: String!): Book
 }
 
 # type Subscription {
