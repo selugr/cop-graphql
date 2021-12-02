@@ -1,8 +1,8 @@
 const { readFileSync } = require("fs");
 const path = require("path");
 
-module.exports = (folder) =>
+module.exports = (schema) =>
   readFileSync(
-    path.resolve(path.join(__dirname, `../${folder}`, "schema.graphql")),
+    path.resolve(path.join(__dirname, "../schemas", `${schema}.graphql`)),
     "utf-8"
   );

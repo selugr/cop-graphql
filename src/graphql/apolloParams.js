@@ -1,25 +1,25 @@
 const getType = require("./utils/schemaHelper");
-const bookResolver = require("./Book/book.resolvers");
-const authorResolver = require("./Author/author.resolvers");
+import Query from "./resolvers/Query";
+import Mutation from "./resolvers/Mutation";
+import Author from "./resolvers/Author";
+import Book from "./resolvers/Book";
+import db from "./services/db";
 const { gql } = require("apollo-server");
 
 const typeDefs = gql(`
-${getType("Book")}
-${getType("Author")}
+${getType("book")}
+${getType("author")}
 `);
 
 module.exports = {
   typeDefs,
   resolvers: {
-    Query: {
-      ...bookResolver.Query,
-      ...authorResolver.Query,
-    },
-    Mutation: {
-      ...bookResolver.Mutation,
-      ...authorResolver.Mutation,
-    },
-    Book: { ...bookResolver.Book },
-    Author: { ...authorResolver.Author },
+    Query,
+    Mutation,
+    Book,
+    Author,
+  },
+  context: {
+    db,
   },
 };
